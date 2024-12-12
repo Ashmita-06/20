@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume and Bio-Data</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6e6e6;
+            color: #333;
+        }
+        header {
+            background: #0d1b6b;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #283593;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            text-align: center;
+            background: #3f51b5;
+            color: #fff;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showSection('resume')">Resume</a>
+        <a href="#" onclick="showSection('biodata')">Bio-Data</a>
+    </nav>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p><strong>Name:</strong> Ashmita chavan</p>
+        <p><strong>Email:</strong> ashmitachavan@gmail.com</p>
+        <p><strong>Phone:</strong>7019162071</p>
+        <p><strong>Education:</strong></p>
+        <ul>
+            <li>Bachelor of Engineering in Computer Science -Dayananda sagar academy of technology and management</li>
+            <li>pre-university -Shree gurunagalingeshwara inde pu collage</li>
+        </ul>
+        <p><strong>Certificate:</strong></p>
+        <ul>
+            <li>Infosys:Introduction to AI 2024</li>
+            <li>Intel:Introduction to Generative AI 2024</li>
+            <li>CISCO:Networking Basics 2024</li>
+        </ul>
+    </section>
+
+    <!-- Bio-Data Section -->
+    <section id="biodata" class="hidden">
+        <h2>Bio-Data</h2>
+        <p><strong>Full Name:</strong>Ashmita chavan </p>
+        <p><strong>Gender:</strong>Female</p>
+        <p><strong>Date of Birth:</strong> May,05 2004</p>
+        <p><strong>Nationality:</strong> Indian</p>
+        <p><strong>Marital Status:</strong> Single</p>
+        <p><strong>Hobbies:</strong>Reading, Traveling,coding</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Ashmita</p>
+    </footer>
+
+    <script>
+        // Function to toggle between sections
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
